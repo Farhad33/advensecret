@@ -28,24 +28,24 @@ jobs:
         env:
           IP: ${{secrets.IP}}
         run: |
-          scp -i $HOME/VFix.pem -o StrictHostKeyChecking=no MyVfix-6.tar.gz ubuntu@$IP:~
+          scp -i $HOME/VFix.pem -o StrictHostKeyChecking=no advensecret.tar.gz ubuntu@$IP:~
         
       - name: Deploy project to Vfix server
         env:
           IP: ${{secrets.IP}}
         run: |
           ssh -i $HOME/VFix.pem -o StrictHostKeyChecking=no ubuntu@$IP "
-            mkdir -p MyVfix-6-temp &&
-            tar xf MyVfix-6.tar.gz -C MyVfix-6-temp 2> /dev/null &&
-            rm MyVfix-6.tar.gz &&
-            cd MyVfix-6-temp &&
+            mkdir -p advensecret-temp &&
+            tar xf advensecret.tar.gz -C advensecret-temp 2> /dev/null &&
+            rm advensecret.tar.gz &&
+            cd advensecret-temp &&
             find . -name '._*' -exec rm {} \; &&
             npm i &&
             npm run build &&
             cd .. &&
-            rm -rf MyVfix-6 &&
-            mv MyVfix-6-temp MyVfix-6 &&
-            cd MyVfix-6 &&
-            pm2 start npm --name 'MyVfix-6' -- start
+            rm -rf advensecret &&
+            mv advensecret-temp advensecret &&
+            cd advensecret &&
+            pm2 start npm --name 'advensecret' -- start
           "
         
