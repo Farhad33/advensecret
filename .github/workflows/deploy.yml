@@ -46,6 +46,7 @@ jobs:
             rm -rf advensecret &&
             mv advensecret-temp advensecret &&
             cd advensecret &&
+            pm2 delete advensecret --silent &&
             pm2 start npm --name 'advensecret' -- start
           "
         
