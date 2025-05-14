@@ -15,7 +15,7 @@ jobs:
 
       - name: Archive project
         run: |
-          tar czf MyVfix-6.tar.gz package.json next.config.js jsconfig.json src public
+          tar czf advensecret.tar.gz package.json next.config.js jsconfig.json src public
 
       - name: Decode SSH key
         env:
