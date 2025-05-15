@@ -40,6 +40,9 @@ const ServicesContainer = styled(Container)`
 `
 const MainContainer = styled(Container)`
     padding: 200px 0;
+    @media (max-width: 700px) {
+        padding: 0;
+    }
 `
 const Title = styled(Typography)`
     text-align: center;

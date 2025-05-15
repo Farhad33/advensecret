@@ -17,20 +17,52 @@ export default function HomeTopSection({ setShowTypeForm }) {
           <Description variant='body2'>Answer to a set of questions, and we’ll design a one of a kind surprise journey, perfectly crafted to your vibe. No stress, no spoilers, just pure adventure.</Description>
           <BookService onClick={setShowTypeForm} variant='secondary' size='large'>Design My Adventure</BookService>
         </LeftContainer>
-        <Home src="/top-section.jpg" alt="Yazd" />
-        <Layer src="/layer.png" alt="Layer" />
+        <RightContainer>
+          <Home src="/top-section.jpg" alt="Yazd" />
+          <Layer src="/layer.png" alt="Layer" />
+        </RightContainer>
       </TopSectionContainer>
     </MainContainer>
   )
 }
-
+const TopSectionContainer = styled(Container)`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  @media screen and (max-width: 700px) {
+    flex-direction: column-reverse;
+  }
+`
+const RightContainer = styled(Container)`
+  position: relative;
+  width: 50%;
+  @media screen and (max-width: 700px) {
+    width: 100%;
+  }
+`
 const LeftContainer = styled(Container)`
   align-items: center;
   justify-content: center;
   width: 50%;
-  h1 {
-    font-size: 60px;
-    margin-bottom: 30px;
+  @media screen and (max-width: 700px) {
+    width: 100%;
+    margin-top: 30px;
+  }
+`
+const Layer = styled.img`
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+`
+const Home = styled.img`
+  border: 5px solid ${color.red};
+  border-radius: 450px 450px 0 0;
+  z-index: 2;
+  width: 100%;
+  margin-top: 10vw;
+  @media screen and (max-width: 700px) {
+    margin-top: 20vw;
   }
 `
 const BookService = styled(Button)`
@@ -38,37 +70,29 @@ const BookService = styled(Button)`
   align-self: center;
 `
 const Title = styled(Typography)`
-`
+  font-size: 60px;
+  margin-bottom: 30px;
+
+  @media screen and (max-width: 1110px) {
+    font-size: 40px;
+  }
+  @media screen and (max-width: 750px) {
+    font-size: 30px;
+  }
+`;
+
 const Description = styled(Typography)`
   width: calc(5vw + 280px);
   margin-top: 20px;
-  @media screen and (max-width: 690px) {
-    display: none;
+  @media screen and (max-width: 700px) {
+    font-size: 17px;
+    line-height: 25px;
   }
 `
 const MainContainer = styled(Container)`
-  width: 100%;
-`
-const TopSectionContainer = styled(Container)`
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   width: 100%;
-  height: 100%;
-  @media screen and (max-width: 690px) {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
 `
-const Layer = styled.img`
-  width: 50%;
-  position: absolute;
-  top: 100px;
-  right: 0;
-  z-index: -1;
-`
-const Home = styled.img`
-  border: 5px solid ${color.red};
-  width: 50%;
-  margin-top: 200px;
-  border-radius: 450px 450px 0 0;
-`
+

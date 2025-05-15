@@ -45,4 +45,14 @@ const ServiceContainer = styled(Container)`
     &:hover {
         box-shadow: 0px 0px 20px -1px ${color.green};
     }
+    @media (max-width: 700px) {
+        p {
+            font-size: 16px;
+            line-height: 18px;
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+        }
+    }
 `

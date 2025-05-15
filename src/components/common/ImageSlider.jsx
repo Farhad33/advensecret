@@ -67,7 +67,7 @@ const MainContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin: 100px auto;
-  width: 900px;
+  width: 380px;
   .swiper {
     width: 100%;
     padding-top: 50px;

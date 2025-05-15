@@ -65,6 +65,9 @@ const Logo = Styled.img`
 const SocialMediaContainer = Styled.div`
     display: flex;
     gap: 20px;
+    @media (max-width: 700px) {
+        gap: 15px;
+    }
 `
 
 const SocialMediaLink = Styled(Link)`

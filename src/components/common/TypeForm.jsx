@@ -3,16 +3,16 @@ import styled from 'styled-components'
 
 export default function TypeForm({ setShowTypeForm, showTypeForm }) {
 
-    const handleFormStatus = () => {
-        setShowTypeForm(!showTypeForm)
-    }
+  const handleFormStatus = () => {
+    setShowTypeForm(!showTypeForm)
+  }
 
-    return (
-        <TypeFormContainer $isShow={showTypeForm}>
-            <Close onClick={handleFormStatus}>X</Close>
-            <div data-tf-live="01JTSGFGCPX4J3SW0YN4PPZDVZ" ></div>
-        </TypeFormContainer>
-    )
+  return (
+    <TypeFormContainer $isShow={showTypeForm}>
+      <Close onClick={handleFormStatus}>X</Close>
+      <div data-tf-live="01JVAZWYP5DQWFYA86N6JRB52G" ></div>
+    </TypeFormContainer>
+  )
 }
 
 const TypeFormContainer = styled.div`
@@ -23,14 +23,25 @@ const TypeFormContainer = styled.div`
   transform: translate(-50%, -50%);
   z-index: 1000;
   width: 50%;
+  @media screen and (max-width: 700px) {
+    width: 100%;
+    height: 100%;
+  }
 `
 const Close = styled.button`
   position: absolute;
   top: 20px;
   right: 20px;
   font-size: 24px;
-  background-color: transparent;
+  font-weight: bold;
+  background-color: black;
+  padding: 10px;
+  border-radius: 50%;
+  color: white;
   border: none;
   cursor: pointer;
-  z-index: 1001;
+  z-index: 100001;
 `
+
+
+// < div data-tf - live="01JVAZWYP5DQWFYA86N6JRB52G" ></div > <script src="//embed.typeform.com/next/embed.js"></script>

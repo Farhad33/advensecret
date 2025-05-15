@@ -43,7 +43,8 @@ const FooterContainer = styled(Container)`
     margin-top: 150px;
     padding: 50px;
     @media (max-width: 768px) {
-        margin-top: 50px;
+        margin-top: 150px;
+        margin-bottom: 0px;
     }
     transition: all 0.3s ease-in-out;
 `
@@ -59,7 +60,15 @@ const TopContainer = styled(Container)`
         margin: 20px 0;
     }
     @media (max-width: 768px) {
-        display: none;
+        margin: 0;
+        p {
+            display: none;
+        }
+        h2 {
+            font-size: 20px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
     }
     transition: all 0.3s ease-in-out;
 `
