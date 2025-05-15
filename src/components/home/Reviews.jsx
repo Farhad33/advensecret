@@ -3,10 +3,12 @@ import styled from 'styled-components'
 import Container from '@/components/common/Container'
 import reviewsData from './reviewsData.json'
 import Review from './Review'
+import Typography from '@/components/common/Typography'
 
 export default function Reviews() {
     return (
         <MainContainer column center>
+            <Typography variant='h1'>Testimonials</Typography>
             <ReviewsContainer>
                 {reviewsData.map((review) => (
                     <Review key={review.name} {...review} />
@@ -29,4 +31,7 @@ const ReviewsContainer = styled(Container)`
 `
 const MainContainer = styled(Container)`
     margin-top: 50px;
+    h1 {
+        margin-bottom: 70px;
+    }
 `

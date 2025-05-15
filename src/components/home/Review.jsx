@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import Container from '@/components/common/Container'
 import Typography from '@/components/common/Typography'
 import { color } from '@/components/common/Theme'
-// import Image from "next/image"
 
 export default function Review({ name, imageUrl, review }) {
 
@@ -20,6 +19,7 @@ export default function Review({ name, imageUrl, review }) {
 const Image = styled.img`
     height: 200px;
     border-radius: 10px;
+    margin-right: 10px;
 `
 const Title = styled(Typography)`
     color: ${color.green};

@@ -27,8 +27,11 @@ export default function HomeTopSection({ setShowTypeForm }) {
 const LeftContainer = styled(Container)`
   align-items: center;
   justify-content: center;
-
   width: 50%;
+  h1 {
+    font-size: 60px;
+    margin-bottom: 30px;
+  }
 `
 const BookService = styled(Button)`
   margin-top: 50px;
