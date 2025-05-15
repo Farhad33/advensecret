@@ -1,9 +1,7 @@
 import StyledComponentsRegistry from '@/lib/registry'
 import Header from '@/components/common/Header'
 import Footer from '@/components/common/Footer'
-import Zenbooker from '../lib/Zenbooker'
 import Script from 'next/script'
-import Head from 'next/head'
 import Body from '@/components/common/Body'
 
 
@@ -18,16 +16,6 @@ export default function RootLayout(props) {
       <meta name="msapplication-TileColor" content="#003179"></meta>
       <meta name="theme-color" content="#ffffff"></meta>
       <Script src="//embed.typeform.com/next/embed.js"></Script>
-      <Script id="hotjar">
-        {`(function(h,o,t,j,a,r){
-            h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
-            h._hjSettings={hjid:3018417,hjsv:6};
-            a=o.getElementsByTagName('head')[0];
-            r=o.createElement('script');r.async=1;
-            r.src=t+h._hjSettings.hjid+j+h._hjSettings.hjsv;
-            a.appendChild(r);
-        })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=')`}
-      </Script>
       <StyledComponentsRegistry>
         <Body >
           <Header />
@@ -36,7 +24,6 @@ export default function RootLayout(props) {
 
         </Body>
       </StyledComponentsRegistry>
-      <Zenbooker />
     </html>
   )
 }
