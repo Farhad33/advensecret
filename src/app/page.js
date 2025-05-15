@@ -1,8 +1,6 @@
 import Container from '@/components/common/Container'
 import TopSection from '@/components/home/TopSection'
 import Services from '@/components/home/Services'
-import Features from '@/components/home/Reviews'
-import Protection from '@/components/home/Protection'
 import ImageSlider from '@/components/common/ImageSlider'
 
 export const metadata = {
@@ -16,8 +14,6 @@ export default function HomePage() {
       <TopSection />
       <ImageSlider />
       <Services />
-      <Features /> 
-      <Protection />
     </Container>
   )
 }
