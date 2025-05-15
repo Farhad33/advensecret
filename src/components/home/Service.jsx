@@ -5,23 +5,19 @@ import Container from '@/components/common/Container'
 import Typography from '@/components/common/Typography'
 import Button from '@/components/common/Button'
 import { useRouter } from 'next/navigation'
+import { color } from '@/components/common/Theme'
 
-export default function Service({ title, imageUrl, description, bookLink }) {
+export default function Service({ title, description }) {
     const { push } = useRouter()
 
     const handleBookNow = () => {
-		Zenbooker.showPopupWidget(bookLink)
-	}
+        Zenbooker.showPopupWidget(bookLink)
+    }
 
     return (
         <ServiceContainer column>
-            <Image src={imageUrl} width={300} height={300} alt={title} />
             <Typography variant='h2'>{title}</Typography>
             <Typography variant='body2'>{description}</Typography>
-            <LinksContainer>
-                <Button onClick={handleBookNow}>Book Now</Button>
-                {/* <Link href='/'>Learn More</Link> */}
-            </LinksContainer>
         </ServiceContainer>
     )
 }
@@ -47,6 +43,6 @@ const ServiceContainer = styled(Container)`
         margin-bottom: 10px;
     }
     &:hover {
-        box-shadow: 0px 0px 20px -1px rgba(0,174,239,0.8);
+        box-shadow: 0px 0px 20px -1px ${color.green};
     }
 `

@@ -5,10 +5,10 @@ import Container from '@/components/common/Container'
 import Typography from '@/components/common/Typography'
 import { color } from '@/components/common/Theme'
 
-export default function Feature({ title, imageUrl, description }) {
+export default function Review({ title, imageUrl, description }) {
 
     return (
-        <FeatureContainer column>
+        <ReviewContainer column>
             <Title variant='h2'>{title}</Title>
             <DotLottiePlayer
                 src={imageUrl}
@@ -17,14 +17,14 @@ export default function Feature({ title, imageUrl, description }) {
                 mode="normal"
             />
             <Typography variant='body2'>{description}</Typography>
-        </FeatureContainer>
+        </ReviewContainer>
     )
 }
 
 const Title = styled(Typography)`
     color: ${color.VfixBlue};
 `
-const FeatureContainer = styled(Container)`
+const ReviewContainer = styled(Container)`
     text-align: center;
     padding: 20px;
     transition: all 0.3s ease-in-out;

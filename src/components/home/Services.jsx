@@ -9,15 +9,13 @@ import servicesData from './servicesData.json'
 import Service from './Service'
 
 export default function Services() {
-    const description = "At VFIX, we offer a diverse range of services designed to meet all your home needs. Our team of experienced technicians are equipped with the skills and tools necessary to deliver top-notch service, no matter the task at hand."
-    
+
     return (
         <MainContainer column center>
-            <Title variant='h1'>Comprehensive Home Services Tailored to Your Needs</Title>
-            <Description variant='body3'>{description}</Description>
+            <Title variant='h1'>Features</Title>
             <ServicesContainer>
-                {servicesData.map((service) => (
-                    <Service key={service.imageUrl} {...service} />
+                {servicesData.map((service, index) => (
+                    <Service key={index} {...service} />
                 ))}
             </ServicesContainer>
         </MainContainer>
@@ -41,7 +39,7 @@ const ServicesContainer = styled(Container)`
     }
 `
 const MainContainer = styled(Container)`
-    margin-top: 50px;
+    padding: 200px 0;
 `
 const Title = styled(Typography)`
     text-align: center;

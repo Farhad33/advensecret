@@ -1,22 +1,22 @@
 'use client'
 import styled from 'styled-components'
 import Container from '@/components/common/Container'
-import featuresData from './featuresData.json'
-import Feature from './Feature'
+import reviewsData from './reviewsData.json'
+import Review from './Review'
 
-export default function Features() {    
+export default function Reviews() {
     return (
         <MainContainer column center>
-            <FeaturesContainer>
-                {featuresData.map((feature) => (
-                    <Feature key={feature.title} {...feature} />
+            <ReviewsContainer>
+                {reviewsData.map((feature) => (
+                    <Review key={feature.title} {...feature} />
                 ))}
-            </FeaturesContainer>
+            </ReviewsContainer>
         </MainContainer>
     )
 }
 
-const FeaturesContainer = styled(Container)`
+const ReviewsContainer = styled(Container)`
     display: grid;
     gap: 40px;
     padding: 20px 150px;

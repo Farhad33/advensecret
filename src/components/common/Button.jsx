@@ -2,7 +2,7 @@
 import Styled, { css } from 'styled-components'
 import { color, Theme } from '@/components/common/Theme'
 
-export default function Button({ children, onClick, className, variant='primary', size='small' }) {
+export default function Button({ children, onClick, className, variant = 'primary', size = 'small' }) {
     return (
         <ButtonComponent
             onClick={onClick}
@@ -32,7 +32,7 @@ const ButtonComponent = Styled.button`
     transition: all 0.3s ease-in-out;
     border: 0;
     cursor: pointer;
-    ${({ $variant }) => $variant === 'secondary' && css`border: 2px solid ${color.VfixBlue};`}
+    ${({ $variant }) => $variant === 'secondary' && css`border: 2px solid ${color.green};`}
     &:hover {
         background-color: ${color.black};
         color: ${color.white};

@@ -1,9 +1,23 @@
+import { green } from "@mui/material/colors"
+
 export const color = {
     VfixBlue: '#00aeef',
     white: '#ffffff',
     black: '#000000',
-    gray: '#e3e3e3'
+    gray: '#e3e3e3',
+    main: '#f5eedc',
+    green: '#657c62',
+    red: '#9d0200'
 }
+
+// green
+// 657c62
+//     .
+//     red
+// 9d0200
+//     .
+//     khaki
+// eeefea
 
 export const Theme = {
     typography: {
@@ -86,7 +100,7 @@ export const Theme = {
                 color: color.white,
             },
             secondary: {
-                background: color.white,
+                background: color.main,
                 color: color.black,
             },
         },

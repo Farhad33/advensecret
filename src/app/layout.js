@@ -4,6 +4,7 @@ import Footer from '@/components/common/Footer'
 import Zenbooker from '../lib/Zenbooker'
 import Script from 'next/script'
 import Head from 'next/head'
+import Body from '@/components/common/Body'
 
 
 export default function RootLayout(props) {
@@ -16,6 +17,7 @@ export default function RootLayout(props) {
       <link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#00aeef"></link>
       <meta name="msapplication-TileColor" content="#003179"></meta>
       <meta name="theme-color" content="#ffffff"></meta>
+      <Script src="//embed.typeform.com/next/embed.js"></Script>
       <Script id="hotjar">
         {`(function(h,o,t,j,a,r){
             h.hj=h.hj||function(){(h.hj.q=h.hj.q||[]).push(arguments)};
@@ -27,12 +29,12 @@ export default function RootLayout(props) {
         })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=')`}
       </Script>
       <StyledComponentsRegistry>
-        <body >
+        <Body >
           <Header />
           {props.children}
           <Footer />
 
-        </body>
+        </Body>
       </StyledComponentsRegistry>
       <Zenbooker />
     </html>
