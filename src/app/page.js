@@ -1,19 +1,8 @@
-import Container from '@/components/common/Container'
-import TopSection from '@/components/home/TopSection'
-import Services from '@/components/home/Services'
-import ImageSlider from '@/components/common/ImageSlider'
+import HomeComponents from '@/components/home/HomeComponents'
 
 export const metadata = {
-  title: "VFix",
-  description: "VFIX offers a wide range of professional home services including TV mounting, furniture assembly, and more. Experience quality, efficiency, and peace of mind with our expert technicians.",
+  title: "AdvenSecret",
+  description: "Don’t Plan Your Trip. Let the Trip Find You.",
 }
 
-export default function HomePage() {
-  return (
-    <Container column center>
-      <TopSection />
-      <ImageSlider />
-      <Services />
-    </Container>
-  )
-}
+export default HomeComponents

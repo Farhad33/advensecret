@@ -1,57 +1,29 @@
 'use client'
-import { useState } from 'react'
-import styled, { keyframes, css } from 'styled-components'
-import Image from "next/image"
+import styled from 'styled-components'
 import Container from '@/components/common/Container'
 import Typography from '@/components/common/Typography'
 import Button from '@/components/common/Button'
 import { color } from '@/components/common/Theme'
 
 
-
-export default function HomeTopSection() {
-  const [showTypeForm, setShowTypeForm] = useState(false)
-  const handleBookNow = () => {
-    setShowTypeForm(showTypeForm => !showTypeForm)
-  }
+export default function HomeTopSection({ setShowTypeForm }) {
 
   return (
     <MainContainer>
-      <TypeForm $isShow={showTypeForm}>
-        <Close onClick={handleBookNow}>X</Close>
-        <div data-tf-live="01JTSGFGCPX4J3SW0YN4PPZDVZ" ></div>
-      </TypeForm>
       <TopSectionContainer>
         <LeftContainer column>
           <Title variant='h1'>Don’t Plan Your Trip.</Title>
           <Title variant='h1'>Let the Trip Find You.</Title>
           <Description variant='body2'>Answer to a set of questions, and we’ll design a one of a kind surprise journey, perfectly crafted to your vibe. No stress, no spoilers, just pure adventure.</Description>
-          <BookService onClick={handleBookNow} variant='secondary' size='large'>Design My Adventure</BookService>
+          <BookService onClick={setShowTypeForm} variant='secondary' size='large'>Design My Adventure</BookService>
         </LeftContainer>
         <Home src="/top-section.jpg" alt="Yazd" />
+        <Layer src="/layer.png" alt="Layer" />
       </TopSectionContainer>
     </MainContainer>
   )
 }
-const TypeForm = styled.div`
-  display: ${({ $isShow }) => ($isShow ? 'block' : 'none')};
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 1000;
-  width: 50%;
-`
-const Close = styled.button`
-  position: absolute;
-  top: 20px;
-  right: 20px;
-  font-size: 24px;
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  z-index: 1001;
-`
+
 const LeftContainer = styled(Container)`
   align-items: center;
   justify-content: center;
@@ -84,8 +56,16 @@ const TopSectionContainer = styled(Container)`
     justify-content: center;
   }
 `
-const Home = styled.img`
-	/* width: calc(15vw + 300px);
-	height: calc(15vw + 300px); */
+const Layer = styled.img`
   width: 50%;
+  position: absolute;
+  top: 100px;
+  right: 0;
+  z-index: -1;
+`
+const Home = styled.img`
+  border: 5px solid ${color.red};
+  width: 50%;
+  margin-top: 200px;
+  border-radius: 450px 450px 0 0;
 `

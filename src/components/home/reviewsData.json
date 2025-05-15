@@ -1,22 +1,22 @@
 [
     {
         "name": "Nickta",
-        "imageUrl": "nikta.jpg",
+        "imageUrl": "nikta-2.jpg",
         "review": "I had no idea where I was going, but it turned out to be the most healing experience of my life."
     },
     {
         "name": "Luca A",
-        "imageUrl": "Luca.jpg",
+        "imageUrl": "luca-2.jpeg",
         "review": "It felt like someone had read my soul and sent me exactly where I needed to be."
     },
     {
         "name": "Sara Hu",
-        "imageUrl": "sara.jpg",
-        "description": "I never imagined milking goats in the mountains or dancing at a local festival in a hidden village…but this trip changed how I travel forever."
+        "imageUrl": "sara-2.jpg",
+        "review": "I never imagined milking goats in the mountains or dancing at a local festival in a hidden village…but this trip changed how I travel forever."
     },
     {
-        "name": "Sara Hu",
-        "imageUrl": "sara.jpg",
-        "description": "I never imagined milking goats in the mountains or dancing at a local festival in a hidden village…but this trip changed how I travel forever."
+        "name": "Saba",
+        "imageUrl": "sara-2.jpg",
+        "review": "I never imagined milking goats in the mountains or dancing at a local festival in a hidden village…but this trip changed how I travel forever."
     }
 ]

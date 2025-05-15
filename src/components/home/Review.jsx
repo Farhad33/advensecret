@@ -3,22 +3,32 @@ import styled from 'styled-components'
 import Container from '@/components/common/Container'
 import Typography from '@/components/common/Typography'
 import { color } from '@/components/common/Theme'
+// import Image from "next/image"
 
-export default function Review({ title, imageUrl, description }) {
+export default function Review({ name, imageUrl, review }) {
 
     return (
         <ReviewContainer column>
-            <Title variant='h2'>{title}</Title>
-            <Typography variant='body2'>{description}</Typography>
+            <Image src={imageUrl} alt={name} width='200' height='200' />
+            <div>
+                <Typography variant='body2'>“{review}”</Typography>
+                <Title variant='h2'>- {name}</Title>
+            </div>
         </ReviewContainer>
     )
 }
-
+const Image = styled.img`
+    height: 200px;
+    border-radius: 10px;
+`
 const Title = styled(Typography)`
-    color: ${color.VfixBlue};
+    color: ${color.green};
 `
 const ReviewContainer = styled(Container)`
+    display: flex;
+    flex-direction: row;
     text-align: center;
+    align-items: center;
     padding: 20px;
     transition: all 0.3s ease-in-out;
     border-radius: 20px;
@@ -29,7 +39,7 @@ const ReviewContainer = styled(Container)`
             height: 250px !important;
         }
     }
-    box-shadow: 0px 0px 20px -1px rgba(0,174,239,0.8);
+    box-shadow: 0px 0px 20px -1px ${color.green};
     &:hover {
     }
 `

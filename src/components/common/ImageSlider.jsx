@@ -1,95 +1,91 @@
 'use client';
 import styled from 'styled-components';
-import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
 import { color } from '@/components/common/Theme'
-
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
 
 const images = [
-    '1.jpg',
-    '2.jpg',
-    '3.jpg',
-    '4.jpg',
-    '5.jpg',
-    '6.jpg',
-    '7.jpg',
-];
+  '1.jpg',
+  '2.jpg',
+  '3.jpg',
+  '4.jpg',
+  '5.jpg',
+  '6.jpg',
+  '7.jpg',
+]
+
+
 
 export default function ImageSlider() {
-    return (
-        <MainContainer>
-            <Carousel
-                infiniteLoop
-                showArrows
-                autoPlay
-                showThumbs={true}
-                interval={2000}
-                swipeable
-                showStatus
-                useKeyboardArrows
-                emulateTouch
-                renderThumbs={() =>
-                    images.map((src, index) => (
-                        <div key={index}>
-                            <Thumbnail src={src} alt={`Thumb ${index}`} />
-                        </div>
-                    ))
-                }
-            >
-                {images.map((src, index) => (
-                    <div key={index}>
-                        <MainImageWrapper>
-                            <MainImage src={src} alt={`Image ${index}`} />
-                        </MainImageWrapper>
-                    </div>
-
-                ))}
-            </Carousel>
-        </MainContainer>
-    );
+  return (
+    <MainContainer>
+      <Swiper
+        effect={'coverflow'}
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView={'auto'}
+        loop={true}
+        autoplay={{ delay: 2000 }}
+        spaceBetween={10}
+        coverflowEffect={{
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: false,
+        }}
+        pagination={true}
+        modules={[EffectCoverflow, Pagination, Autoplay]}
+        className="mySwiper"
+      >
+        {images.map((src, index) => (
+          <SwiperSlide key={index}>
+            <MainImage src={src} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </MainContainer>
+  );
 }
 
-const MainImageWrapper = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 10px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
-  border-radius: 12px;
-  background: ${color.main};
-  max-width: fit-content;
-  margin: 0 auto;
-`;
+
 
 const MainImage = styled.img`
-  height: 500px;
+  height: 600px;
   width: auto;
   object-fit: contain;
   display: block;
   border-radius: 12px;
-`;
-
-
-
-const Thumbnail = styled.img`
-  height: 100px;
-  width: auto;
-  object-fit: contain;
-`;
+`
 
 const MainContainer = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 100px auto;
-  .carousel .thumbs-wrapper {
-    display: flex;
-    justify-content: center;
+  width: 900px;
+  .swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
-  .carousel .thumbs {
-    display: flex;
-    justify-content: center;
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 400px;
+    height: 600px;
+    img {
+      box-shadow: 0px 0px 20px -1px ${color.green};
+    }
+  }
+
+  .swiper-slide img {
+    display: block;
+    width: 100%;
   }
 `

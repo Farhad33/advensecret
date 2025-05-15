@@ -1,6 +1,4 @@
 import StyledComponentsRegistry from '@/lib/registry'
-import Header from '@/components/common/Header'
-import Footer from '@/components/common/Footer'
 import Script from 'next/script'
 import Body from '@/components/common/Body'
 
@@ -18,10 +16,7 @@ export default function RootLayout(props) {
       <Script src="//embed.typeform.com/next/embed.js"></Script>
       <StyledComponentsRegistry>
         <Body >
-          <Header />
           {props.children}
-          <Footer />
-
         </Body>
       </StyledComponentsRegistry>
     </html>

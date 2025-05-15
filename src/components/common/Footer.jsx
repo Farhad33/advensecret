@@ -6,18 +6,14 @@ import Button from '@/components/common/Button'
 import { color } from '@/components/common/Theme'
 import Link from 'next/link'
 
-export default function Footer() {
-
-    const handleBookNow = () => {
-        Zenbooker.showPopupWidget('https://widget.zenbooker.com/book/1602564569602x960307736376989400?embed=true')
-    }
+export default function Footer({ setShowTypeForm, showTypeForm }) {
 
     return (
         <FooterContainer column>
             <TopContainer column center>
                 <Typography variant='h2'>Don’t Plan Your Trip.Let the Trip Find You.</Typography>
                 <Typography variant='body1'>Answer to a set of questions, and we’ll design a one of a kind surprise journey, perfectly crafted to your vibe. No stress, no spoilers, just pure adventure.</Typography>
-                <Button onClick={handleBookNow} variant='secondary'>Book Now</Button>
+                <Button onClick={() => setShowTypeForm(!showTypeForm)} variant='secondary' size='large'>Design My Adventure</Button>
             </TopContainer>
             <SocialMediaContainer>
                 <SocialMediaLink href="#">
@@ -54,7 +50,7 @@ const FooterContainer = styled(Container)`
 const TopContainer = styled(Container)`
     background-color: ${color.green};
     color: white;
-    padding: 30px 10px;
+    padding: 30px 20px;
     margin: 0 100px;
     border-radius: 30px;
     position: relative;

@@ -8,8 +8,8 @@ export default function Reviews() {
     return (
         <MainContainer column center>
             <ReviewsContainer>
-                {reviewsData.map((feature) => (
-                    <Review key={feature.title} {...feature} />
+                {reviewsData.map((review) => (
+                    <Review key={review.name} {...review} />
                 ))}
             </ReviewsContainer>
         </MainContainer>

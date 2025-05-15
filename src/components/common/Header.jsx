@@ -50,7 +50,7 @@ const Header = Styled.header`
     padding: 10px;
     width: 100%;
     background: #f5eedc;
-    box-shadow: 0px 0px 40px -10px rgba(0,0,0,0.3);
+    box-shadow: -9px 15px 40px -10px rgba(0, 0, 0, 0.3);
     z-index: 11;
 `
 
