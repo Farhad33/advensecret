@@ -1,6 +1,5 @@
 'use client'
 import styled from 'styled-components'
-import { DotLottiePlayer } from '@dotlottie/react-player'
 import Container from '@/components/common/Container'
 import Typography from '@/components/common/Typography'
 import { color } from '@/components/common/Theme'
@@ -10,12 +9,6 @@ export default function Review({ title, imageUrl, description }) {
     return (
         <ReviewContainer column>
             <Title variant='h2'>{title}</Title>
-            <DotLottiePlayer
-                src={imageUrl}
-                autoplay
-                loop
-                mode="normal"
-            />
             <Typography variant='body2'>{description}</Typography>
         </ReviewContainer>
     )

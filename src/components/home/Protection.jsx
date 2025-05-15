@@ -1,7 +1,6 @@
 "use client"
 import Image from "next/image"
 import styled from 'styled-components'
-import { DotLottiePlayer } from '@dotlottie/react-player'
 import Container from '@/components/common/Container'
 import Typography from '@/components/common/Typography'
 
@@ -13,12 +12,6 @@ export default function Protection() {
                 <Typography variant="h2" >$1 Million Property Protection</Typography>
                 <Typography variant="body3" >We want to make you feel safe. So, when you book with us, we protect your property up to $1,000,000 against any possible damage.</Typography>
             </Container>
-            <LottiePlayer
-                src="/protection/HomeCoverage.lottie"
-                autoplay
-                loop
-                mode="normal"
-            />
             <Wave src="./protection/wave.svg" width="500" height="500" alt="wave" />
         </ProtectionContainer>
     )
@@ -39,10 +32,6 @@ const ProtectionContainer = styled(Container)`
     h2 {
         margin-bottom: 5px;
     }
-`
-const LottiePlayer = styled(DotLottiePlayer)`
-    width: 40%;
-    height: auto;
 `
 const Wave = styled(Image)`
     width: 100%;

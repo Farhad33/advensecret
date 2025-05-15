@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@dotlottie/react-player": "^1.6.15",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.0",
     "@fontsource/roboto": "^5.0.12",
@@ -22,13 +21,11 @@
     "@mui/x-date-pickers": "^7.0.0",
     "axios": "^1.6.7",
     "dayjs": "^1.11.10",
-    "embla-carousel-react": "^8.6.0",
     "next": "^15.3.2",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "react-markdown": "^9.0.1",
     "react-responsive-carousel": "^3.2.23",
-    "react-slick": "^0.30.3",
     "remark-gfm": "^4.0.0",
     "styled-components": "^6.1.18",
     "swiper": "^11.2.6"
