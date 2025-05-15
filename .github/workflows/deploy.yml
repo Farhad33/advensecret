@@ -35,6 +35,7 @@ jobs:
           IP: ${{secrets.IP}}
         run: |
           ssh -i $HOME/VFix.pem -o StrictHostKeyChecking=no ubuntu@$IP "
+            rm -rf advensecret-temp
             mkdir -p advensecret-temp &&
             tar xf advensecret.tar.gz -C advensecret-temp 2> /dev/null &&
             rm advensecret.tar.gz &&
