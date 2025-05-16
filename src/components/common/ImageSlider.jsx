@@ -67,7 +67,13 @@ const MainContainer = styled.div`
   justify-content: center;
   align-items: center;
   margin: 100px auto;
-  width: 380px;
+  width: 70vw;
+  @media screen and (max-width: 1000px) {
+    width: 90vw;
+  }
+  @media screen and (max-width: 800px) {
+    width: 100vw;
+  }
   .swiper {
     width: 100%;
     padding-top: 50px;
